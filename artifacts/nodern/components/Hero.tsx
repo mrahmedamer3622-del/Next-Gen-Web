@@ -1,8 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring, useInView, animate } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
+
+function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
+  const [display, setDisplay] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, target, {
+      duration: 2,
+      ease: "easeOut",
+      onUpdate: (v) => setDisplay(Math.round(v)),
+    });
+    return controls.stop;
+  }, [inView, target]);
+
+  return (
+    <div ref={ref} className="text-3xl font-bold gradient-text">
+      {display}{suffix}
+    </div>
+  );
+}
 
 function FloatingOrb({
   className,
@@ -185,18 +207,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-wrap justify-center gap-8 mt-16 pt-8 border-t border-white/5"
+          className="flex flex-wrap justify-center gap-10 mt-16 pt-8 border-t border-white/5"
         >
-          {[
-            { num: "150+", label: "Projects Delivered" },
-            { num: "98%", label: "Client Satisfaction" },
-            { num: "5x", label: "Avg. Conversion Boost" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl font-bold gradient-text">{stat.num}</div>
-              <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
-            </div>
-          ))}
+          <div className="text-center">
+            <AnimatedCounter target={150} suffix="+" />
+            <div className="text-sm text-slate-500 mt-1">Projects Delivered</div>
+          </div>
+          <div className="text-center">
+            <AnimatedCounter target={98} suffix="%" />
+            <div className="text-sm text-slate-500 mt-1">Client Satisfaction</div>
+          </div>
+          <div className="text-center">
+            <AnimatedCounter target={5} suffix="x" />
+            <div className="text-sm text-slate-500 mt-1">Avg. Conversion Boost</div>
+          </div>
         </motion.div>
       </div>
 

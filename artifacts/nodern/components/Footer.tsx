@@ -88,8 +88,7 @@ export default function Footer() {
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-slate-600">
-            &copy; {new Date().getFullYear()} Nodern Agency. All rights
-            reserved.
+            &copy; 2025 Nodern Agency. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-xs text-slate-600 hover:text-slate-400 transition-colors">
