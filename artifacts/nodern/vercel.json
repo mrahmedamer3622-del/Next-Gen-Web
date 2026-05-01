@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "installCommand": "cd ../.. && pnpm install --filter @workspace/nodern",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": ".next",
+  "engines": {
+    "node": ">=20"
+  }
+}
