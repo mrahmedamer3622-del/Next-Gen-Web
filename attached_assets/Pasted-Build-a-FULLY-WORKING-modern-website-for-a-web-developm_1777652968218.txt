@@ -1,0 +1,127 @@
+Build a FULLY WORKING modern website for a web development agency called "Nodern" using a STRICT Next.js setup.
+
+IMPORTANT (DO NOT IGNORE):
+- Use Next.js App Router ONLY (no Vite, no CRA)
+- Create a valid Next.js project structure with:
+  /app
+    layout.tsx
+    page.tsx
+    globals.css
+  /components
+  /public
+- Ensure the project runs with: npm run dev
+- Do NOT mix frameworks (no Vite files like main.tsx or index.html)
+
+GOAL:
+The website must instantly impress visitors and convert them into leads. It should feel premium, futuristic, and trustworthy (Web3/SaaS style), while clearly communicating value and encouraging users to contact us.
+
+TECH STACK:
+- Next.js (latest, App Router)
+- React
+- Tailwind CSS (properly configured)
+- Framer Motion for animations
+
+SETUP REQUIREMENTS:
+- Include tailwind.config.js and proper Tailwind setup
+- Use global styles in app/globals.css
+- Use reusable components in /components
+- Use proper import aliases (like @/components)
+
+DESIGN STYLE:
+- Dark theme with glowing gradients (purple, blue, neon)
+- Glassmorphism + blur effects
+- Smooth scrolling and micro-interactions
+- Clean modern typography
+
+HERO SECTION (HIGH PRIORITY):
+- Full-screen hero
+- Animated gradient or particle background
+- Headline:
+  "We Build Websites That Grow Your Business"
+- Subheadline:
+  "Custom, high-performance websites designed to attract, engage, and convert your customers."
+- Primary CTA:
+  "Get Your Free Website Audit"
+- Secondary CTA:
+  "View Our Work"
+- Add motion (floating shapes, glow, mouse interaction)
+- Smooth entrance animations using Framer Motion
+
+SECTIONS:
+
+1. SERVICES
+- Web Design
+- Web Development
+- UI/UX Design
+- Performance Optimization
+Use modern cards with hover effects
+
+2. WHY CHOOSE US
+- Fast Delivery
+- Modern Design
+- SEO Optimized
+- Mobile First
+
+3. PORTFOLIO
+- 3–6 projects
+- Image, title, short description
+- Hover animations
+
+4. TESTIMONIALS
+- 3 testimonials
+- Slider or animated cards
+
+5. PROCESS
+- Discovery
+- Design
+- Development
+- Launch
+
+6. FINAL CTA
+Headline:
+"Ready to Turn Your Idea Into a Powerful Website?"
+Button:
+"Contact Nodern Now"
+
+7. CONTACT
+- Form (Name, Email, Message)
+- Add WhatsApp + email contact options
+
+8. FOOTER
+- Nodern logo
+- Links
+- Socials
+
+ANIMATIONS:
+- Use Framer Motion for:
+  - Scroll reveal
+  - Hover effects
+  - Hero animations
+- Keep animations smooth and professional (not overwhelming)
+
+SEO & PERFORMANCE:
+- Proper <h1>, <h2> structure
+- Optimized images
+- Fast loading
+
+OUTPUT REQUIREMENTS (VERY IMPORTANT):
+- Generate FULL working Next.js code
+- Ensure all files are correctly placed
+- Include:
+  - package.json (with correct scripts: dev, build, start)
+  - tailwind.config.js
+  - postcss.config.js
+- No missing dependencies
+- No broken imports
+
+EXTRA:
+- Add subtle glow effects on hover
+- Add loading animation
+- Make the site feel premium and interactive
+
+FINAL CHECK:
+The project MUST run successfully with:
+npm install
+npm run dev
+
+DO NOT OUTPUT PARTIAL CODE. Generate complete working project.
