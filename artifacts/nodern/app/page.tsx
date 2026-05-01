@@ -8,6 +8,7 @@ import Process from "@/components/Process";
 import FinalCTA from "@/components/FinalCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <FinalCTA />
       <Contact />
       <Footer />
+      <ChatWidget />
     </main>
   );
 }
